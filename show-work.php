@@ -20,9 +20,7 @@ function showWork() {
 	}
 	// if urlID is empty redo the procedure
 	if (empty($url_id)) {
-		echo "stop!<br/>\n";
 		showWork();
-		return;
 	} else {
 		// get the URL value from the ID
 		$query = 'SELECT value FROM itemDataValues WHERE valueID = '. $url_id;
