@@ -1,7 +1,7 @@
 <?php
 function showWork() {
 	$conn = new PDO('sqlite:zotero.sqlite');
-	// get all the works
+	// get all the works in the Zotero database (I keep the works in a specific collection, number 4 in my case)
 	$query = "SELECT DISTINCT itemID FROM collectionItems WHERE collectionID = 4";
 	$result = $conn->query($query);
 	$works = [];
